@@ -1,0 +1,4 @@
+cache has eslint,images,swc and weebpack
+server has app/page.js  and vendor chunks and webpack runtime and middleware
+
+static has chunks/app/page.js and layout.js and css, development and media

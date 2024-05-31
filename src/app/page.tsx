@@ -79,7 +79,7 @@ export default function Home() {
             <Link
               key={index}
               href="#"
-              className="text-muted-foreground transition-colors hover:text-foreground text-nowrap"
+              className="whitespace-nowrap text-muted-foreground transition-colors hover:text-foreground text-nowrap"
             >
               {item}
             </Link>
