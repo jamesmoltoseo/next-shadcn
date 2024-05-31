@@ -176,7 +176,7 @@ export default function Home({ siteTitle }: Props) {
           <div className="flex flex-row right w-2/3 justify-end text-center align-end">
             <div className="max-w-[800px]">
               <h1
-                className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold h-auto text-center text-white uppercase pb-2 mt-0 sm:pb-3 sm:pt-5 sm:pt-5 md:pt-3 xl:mt-7"
+                className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold h-auto text-center text-white uppercase pb-2  sm:pb-3"
                 style={{ lineHeight: 1.5 }}
               >
                 <span className="hidden sm:inline-block">
