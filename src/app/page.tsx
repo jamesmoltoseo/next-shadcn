@@ -163,7 +163,7 @@ export default function Home({ siteTitle }: Props) {
         </div>
       </header>
       <div className="relative">
-        <div style={{ width: "1500px", height: "443px", overflow: "hidden" }}>
+        <div className="h-[210px] sm:h-[445px] overflow-hidden">
           <Image
             src="/img/banners/homepage/aposta-esportiva.webp"
             alt="Aposta Esportiva"
@@ -176,20 +176,24 @@ export default function Home({ siteTitle }: Props) {
           <div className="flex flex-row right w-2/3 justify-end text-center align-end">
             <div className="max-w-[800px]">
               <h1
-                className="text-2xl  sm:text-3xl lg:text-4xl xl:text-5xl font-bold h-auto text-center text-white uppercase pb-3 mt-10 pt-5 sm:pt-5 md:pt-3 xl:mt-7"
+                className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold h-auto text-center text-white uppercase pb-2 mt-0 sm:pb-3 sm:pt-5 sm:pt-5 md:pt-3 xl:mt-7"
                 style={{ lineHeight: 1.5 }}
               >
-                <span className="none hidden md:inline-block">Uma experiência de </span>{' '}aposta<br className="none hidden md:inline-block"></br>{' '}esportiva sem&nbsp;igual
+                <span className="hidden sm:inline-block">
+                  Uma experiência de{" "}
+                </span>{" "}
+                aposta<br className="none hidden md:inline-block"></br>{" "}
+                esportiva sem&nbsp;igual
               </h1>
               <p
-                className="text-white text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl mb-5"
+                className="text-white text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl sm:mb-5"
                 style={{ lineHeight: 1.65 }}
               >
                 Junte-se hoje e vivencie a emoção das<br></br>apostas online e
                 dos jogos de cassino.
               </p>
               <Button
-                className="mx-auto inline-block w-[auto] text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-white bg-red-800 opacity-0.5 hover:opacity-1 hover:bg-orange-800 h-auto text-white mb-0 mt-3"
+                className="mx-auto inline-block w-[auto] text-lg p-2 py-1 sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-white bg-red-800 opacity-0.5 hover:opacity-1 hover:bg-orange-800 h-auto text-white mb-0 mt-3"
                 variant="outline"
                 color="red"
               >
