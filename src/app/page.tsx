@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Activity,
   ArrowUpRight,
@@ -55,17 +56,24 @@ const navItems = [
   "Crash Games",
 ];
 
-export default function Home() {
+const siteTitle = "Sports Bet";
+
+interface Props {
+  siteTitle: string;
+}
+
+export default function Home({ siteTitle }: Props) {
   return (
     <div className="flex min-h-screen w-full flex-col dark bg-black">
-      <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
-        <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
+      <header className="sticky top-0 flex h-16 items-center border-b bg-background gap-4 px-4 md:gap-8 md:px-8">
+        <nav className="hidden flex-col gap-6 text-lg font-medium xl:flex xl:flex-row xl:items-center xl:gap-5 xl:text-sm lg:gap-6">
           <Link
             href="#"
-            className="flex items-center gap-2 text-lg font-semibold md:text-base text-nowrap"
+            className="flex items-center gap-2 text-lg font-semibold md:text-base text-nowrap text-white"
           >
+            {siteTitle}
             <Package2 className="h-6 w-6" />
-            <span className="sr-only">Acme Inc</span>
+            <span className="sr-only">{siteTitle}</span>
           </Link>
           {navItems.map((item, index) => (
             <Link
@@ -82,23 +90,20 @@ export default function Home() {
             <Button
               variant="outline"
               size="icon"
-              className="shrink-0 md:hidden"
+              className="shrink-0 xl:hidden text-white"
             >
               <Menu className="h-5 w-5" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="left">
+          <SheetContent side="left" className="dark text-white">
             <nav className="grid gap-6 text-lg font-medium">
               <Link
                 href="#"
                 className="flex items-center gap-2 text-lg font-semibold"
               >
                 <Package2 className="h-6 w-6" />
-                <span className="sr-only">Acme Inc</span>
-              </Link>
-              <Link href="#" className="hover:text-foreground">
-                Dashboard
+                <span className="sr-only">{siteTitle}</span>
               </Link>
               <Link
                 href="#"
@@ -127,17 +132,18 @@ export default function Home() {
             </nav>
           </SheetContent>
         </Sheet>
-        <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
-          <form className="ml-auto flex-1 sm:flex-initial">
+        <div className="flex w-full items-end justify-end gap-4 md:ml-auto md:gap-2 lg:gap-4">
+          {/* Search */}
+          {/* <form className="ml-auto flex-1 sm:flex-initial">
             <div className="relative">
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
                 type="search"
-                placeholder="Search products..."
+                placeholder="Search"
                 className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
               />
             </div>
-          </form>
+          </form> */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="secondary" size="icon" className="rounded-full">
@@ -156,6 +162,43 @@ export default function Home() {
           </DropdownMenu>
         </div>
       </header>
+      <div className="relative">
+        <div style={{ width: "1500px", height: "443px", overflow: "hidden" }}>
+          <Image
+            src="/img/banners/homepage/aposta-esportiva.webp"
+            alt="Aposta Esportiva"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+        </div>
+        <div className="absolute flex justify-end h-full w-full align-end top-0 left-0 bg-opacity-80 p-8 rounded-lg">
+          <div className="flex flex-row right w-2/3 justify-end text-center align-end">
+            <div className="max-w-[800px]">
+              <h1
+                className="text-2xl  sm:text-3xl lg:text-4xl xl:text-5xl font-bold h-auto text-center text-white uppercase pb-3 mt-10 pt-5 sm:pt-5 md:pt-3 xl:mt-7"
+                style={{ lineHeight: 1.5 }}
+              >
+                <span className="none hidden md:inline-block">Uma experiência de </span>{' '}aposta<br className="none hidden md:inline-block"></br>{' '}esportiva sem&nbsp;igual
+              </h1>
+              <p
+                className="text-white text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl mb-5"
+                style={{ lineHeight: 1.65 }}
+              >
+                Junte-se hoje e vivencie a emoção das<br></br>apostas online e
+                dos jogos de cassino.
+              </p>
+              <Button
+                className="mx-auto inline-block w-[auto] text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-white bg-red-800 opacity-0.5 hover:opacity-1 hover:bg-orange-800 h-auto text-white mb-0 mt-3"
+                variant="outline"
+                color="red"
+              >
+                PLAY NOW!
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
         <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
           <Card x-chunk="dashboard-01-chunk-0">
