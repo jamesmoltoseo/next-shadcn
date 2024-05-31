@@ -58,11 +58,11 @@ const navItems = [
 
 const siteTitle = "Sports Bet";
 
-interface Props {
-  siteTitle: string;
-}
+// interface Props {
+//   siteTitle: string;
+// }
 
-export default function Home({ siteTitle }: Props) {
+export default function Home() {
   return (
     <div className="containerflex min-h-screen w-full flex-col dark bg-black">
       <header className="container sticky top-0 flex h-16 items-center border-b bg-background gap-4 px-4 md:gap-8 md:px-8">
@@ -71,9 +71,9 @@ export default function Home({ siteTitle }: Props) {
             href="#"
             className="flex items-center gap-2 text-lg font-semibold md:text-base text-nowrap text-white"
           >
-            {siteTitle}
+            {/* {siteTitle} */}
             <Package2 className="h-6 w-6" />
-            <span className="sr-only">{siteTitle}</span>
+            {/* <span className="sr-only">{siteTitle}</span> */}
           </Link>
           {navItems.map((item, index) => (
             <Link
