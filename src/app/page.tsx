@@ -193,7 +193,7 @@ export default function Home({ siteTitle }: Props) {
                 dos jogos de cassino.
               </p>
               <Button
-                className="mx-auto inline-block w-[auto] text-lg p-2 py-1 sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-white bg-red-800 opacity-0.5 hover:opacity-1 hover:bg-orange-800 h-auto text-white mb-0 mt-3"
+                className="mx-auto inline-block w-[auto] text-lg p-2 py-1 sm:p-3 sm:px-4 sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-white bg-red-800 opacity-0.5 hover:opacity-1 hover:bg-orange-800 h-auto text-white mb-0 mt-3"
                 variant="outline"
                 color="red"
               >
