@@ -64,8 +64,8 @@ interface Props {
 
 export default function Home({ siteTitle }: Props) {
   return (
-    <div className="flex min-h-screen w-full flex-col dark bg-black">
-      <header className="sticky top-0 flex h-16 items-center border-b bg-background gap-4 px-4 md:gap-8 md:px-8">
+    <div className="containerflex min-h-screen w-full flex-col dark bg-black">
+      <header className="container sticky top-0 flex h-16 items-center border-b bg-background gap-4 px-4 md:gap-8 md:px-8">
         <nav className="hidden flex-col gap-6 text-lg font-medium xl:flex xl:flex-row xl:items-center xl:gap-5 xl:text-sm lg:gap-6">
           <Link
             href="#"
@@ -203,7 +203,7 @@ export default function Home({ siteTitle }: Props) {
           </div>
         </div>
       </div>
-      <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
+      <main className="container flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
         <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
           <Card x-chunk="dashboard-01-chunk-0">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
