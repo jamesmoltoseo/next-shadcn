@@ -65,7 +65,7 @@ const siteTitle = "Sports Bet";
 export default function Home() {
   return (
     <div className="containerflex min-h-screen w-full flex-col dark bg-black">
-      <header className="container sticky top-0 flex h-16 items-center border-b bg-background gap-4 px-4 md:gap-8 md:px-8">
+      <header className="z-2 container sticky top-0 flex h-16 items-center border-b bg-background gap-4 px-4 md:gap-8 md:px-8">
         <nav className="hidden flex-col gap-6 text-lg font-medium xl:flex xl:flex-row xl:items-center xl:gap-5 xl:text-sm lg:gap-6">
           <Link
             href="#"
@@ -162,48 +162,80 @@ export default function Home() {
           </DropdownMenu>
         </div>
       </header>
-      <div className="relative">
-        <div className="h-[210px] sm:h-[445px] overflow-hidden">
-          <Image
-            src="/img/banners/homepage/aposta-esportiva.webp"
-            alt="Aposta Esportiva"
-            layout="fill"
-            objectFit="cover"
-            priority
-          />
-        </div>
-        <div className="absolute flex justify-end h-full w-full align-end top-0 left-0 bg-opacity-80 p-8 rounded-lg">
-          <div className="flex flex-row right w-2/3 justify-end text-center align-end">
-            <div className="max-w-[800px]">
-              <h1
-                className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold h-auto text-center text-white uppercase pb-2  sm:pb-3"
-                style={{ lineHeight: 1.5 }}
-              >
-                <span className="hidden sm:inline-block">
-                  Uma experiência de{" "}
-                </span>{" "}
-                aposta<br className="none hidden md:inline-block"></br>{" "}
-                esportiva sem&nbsp;igual
-              </h1>
-              <p
-                className="text-white text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl sm:mb-5"
-                style={{ lineHeight: 1.65 }}
-              >
-                Junte-se hoje e vivencie a emoção das<br></br>apostas online e
-                dos jogos de cassino.
-              </p>
-              <Button
-                className="mx-auto inline-block w-[auto] text-lg p-2 py-1 sm:p-3 sm:px-4 sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-white bg-red-800 opacity-0.5 hover:opacity-1 hover:bg-orange-800 h-auto text-white mb-0 mt-3"
-                variant="outline"
-                color="red"
-              >
-                PLAY NOW!
-              </Button>
+      <section>
+        <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
+          <div className="flex w-full mx-auto text-left">
+            <div className="relative inline-flex items-center mx-auto align-middle">
+              <div className="text-center">
+                <h1 className="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
+                  Long headline to turn <br className="hidden lg:block" /> your
+                  visitors into users
+                </h1>
+                <p className="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">
+                  Free and Premium themes, UI Kits, templates and landing pages
+                  built with Tailwind CSS, HTML &amp; Next.js.
+                </p>
+                <div className="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
+                  <div className="mt-3 rounded-lg sm:mt-0">
+                    <button className="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                      Get bundle
+                    </button>
+                  </div>
+                  <div className="mt-3 rounded-lg sm:mt-0 sm:ml-3">
+                    <button className="items-center block px-5 lg:px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                      See features
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <div className="relative">
+          <div className="h-[210px] sm:h-[445px] overflow-hidden">
+            <Image
+              src="/img/banners/homepage/aposta-esportiva.webp"
+              alt="Aposta Esportiva"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+          </div>
+          <div className="absolute flex justify-end h-full w-full align-end top-0 left-0 bg-opacity-80 p-8 rounded-lg">
+            <div className="flex flex-row right w-2/3 justify-end text-center align-end">
+              <div className="max-w-[800px]">
+                <h1
+                  className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold h-auto text-center text-white uppercase pb-2  sm:pb-3"
+                  style={{ lineHeight: 1.5 }}
+                >
+                  <span className="hidden sm:inline-block">
+                    Uma experiência de{" "}
+                  </span>{" "}
+                  aposta<br className="none hidden md:inline-block"></br>{" "}
+                  esportiva sem&nbsp;igual
+                </h1>
+                <p
+                  className="text-white text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl sm:mb-5"
+                  style={{ lineHeight: 1.65 }}
+                >
+                  Junte-se hoje e vivencie a emoção das<br></br>apostas online e
+                  dos jogos de cassino.
+                </p>
+                <Button
+                  className="mx-auto inline-block w-[auto] text-lg p-2 py-1 sm:p-3 sm:px-4 sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-white bg-red-800 opacity-0.5 hover:opacity-1 hover:bg-orange-800 h-auto text-white mb-0 mt-3"
+                  variant="outline"
+                  color="red"
+                >
+                  PLAY NOW!
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       <main className="container flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
+    
         <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
           <Card x-chunk="dashboard-01-chunk-0">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
