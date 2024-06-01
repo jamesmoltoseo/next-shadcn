@@ -169,13 +169,18 @@ export default function Home() {
           />
           <div className="container relative flex items-center justify-end">
             <div className="text-center">
-              <h1 className="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
-                Long headline to turn <br className="hidden lg:block" /> your
-                visitors into users
+              <h1 className="max-w-5xl text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-center text-white  font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
+               
+                  Uma experiência de{" "}
+                
+                aposta<br className="none hidden md:inline-block"></br>{" "}
+                esportiva sem&nbsp;igual
               </h1>
               <p className="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">
-                Free and Premium themes, UI Kits, templates and landing pages
-                built with Tailwind CSS, HTML &amp; Next.js.
+              Junte-se hoje e vivencie a emoção das
+apostas online e dos jogos de cassino.
+
+
               </p>
               <div className="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
                 <div className="mt-3 rounded-lg sm:mt-0">
